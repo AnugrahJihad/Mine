@@ -15,6 +15,32 @@ body{
     justify-content: center;
 }
 
+.bx-cloud{
+    animation: moveCloud 5s ease-in-out infinite;
+}
+
+@keyframes moveCloud {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.bx-sun{
+    animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
 .container{
     height: 400px;
     background-color: #163020;
@@ -85,16 +111,7 @@ body{
 
 .today-weather .bx{
     font-size: 4.6rem;
-    animation: rotate 5s linear infinite;
-}
 
-@keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
 }
 
 .weather-temp{
