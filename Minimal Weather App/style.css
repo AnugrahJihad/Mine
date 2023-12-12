@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #37474f;
+    background-color: #304D30;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -17,9 +17,9 @@ body{
 
 .container{
     height: 400px;
-    background-color: #232931;
+    background-color: #163020;
     color: #fff;
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
@@ -30,12 +30,12 @@ body{
     display: flex;
     border-radius: 25px;
     justify-content: center;
-    background: url(1.jpg);
+    background: url(marek-szturc-n3qWOO_WO3E-unsplash.jpg);
     background-position: center;
     background-size: cover;
     transform: scale(1.03) perspective(200px);
     cursor: pointer;
-    box-shadow: 0 0 20px --10px rrgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px -10px rrgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -49,7 +49,7 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(135deg, #5c6bc0 10%, #0d47a1 100%);
+    background: linear-gradient(135deg, #B6C4B6 10%, #304D30 100%);
     border-radius: 25px;
     opacity: 0.5;
 }
@@ -59,6 +59,19 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 25px;
+}
+
+.today-info .bx{
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 .today-weather{
@@ -72,6 +85,16 @@ body{
 
 .today-weather .bx{
     font-size: 4.6rem;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
 }
 
 .weather-temp{
@@ -152,7 +175,7 @@ body{
     font-weight: 700;
     border-radius: 25px;
     padding: 10px;
-    background: #303f9f;
+    background: #7ab67a;
     color: #fff;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -160,5 +183,5 @@ body{
 }
 
 .loc-button:hover{
-    background: #1a237e;
+    background: #B6C4B6;
 }
