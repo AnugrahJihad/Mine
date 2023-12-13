@@ -200,5 +200,6 @@ body{
 }
 
 .loc-button:hover{
+    transform: scale(1.05);
     background: #B6C4B6;
 }
