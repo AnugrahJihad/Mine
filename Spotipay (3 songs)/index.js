@@ -36,7 +36,7 @@ const songs = [
 let musicIndex = 0;
 let isPlaying = false;
 
-function togglePlay() {
+function togglePlay(){
     if (isPlaying) {
         pauseMusic();
     } else {
@@ -44,7 +44,7 @@ function togglePlay() {
     }
 }
 
-function playMusic() {
+function playMusic(){
     isPlaying = true;
 
     playBtn.classList.replace('fa-play', 'fa-pause');
@@ -53,7 +53,7 @@ function playMusic() {
     music.play();
 }
 
-function pauseMusic() {
+function pauseMusic(){
     isPlaying = false;
 
     playBtn.classList.replace('fa-pause', 'fa-play');
@@ -61,7 +61,7 @@ function pauseMusic() {
     music.pause();
 }
 
-function loadMusic(song) {
+function loadMusic(song){
     music.src = song.path;
     title.textContent = song.displayName;
     artist.textContent = song.artist;
@@ -69,13 +69,13 @@ function loadMusic(song) {
     background.src = song.cover;
 }
 
-function changeMusic(direction) {
+function changeMusic(direction){
     musicIndex = (musicIndex + direction + songs.length) % songs.length;
     loadMusic(songs[musicIndex]);
     playMusic();
 }
 
-function updateProgressBar() {
+function updateProgressBar(){
     const { duration, currentTime} = music;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
@@ -85,7 +85,7 @@ function updateProgressBar() {
     currentTimeEl.textContent = `${formatTime(currentTime / 60)}:${formatTime(currentTime % 60)}`;
 }
 
-function setProgressBar(e) {
+function setProgressBar(e){
     const width = playerProgress.clientWidth;
     const clickX = e.offsetX;
     music.currentTime = (clickX / width) * music.duration;
